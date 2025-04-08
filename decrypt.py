@@ -15,5 +15,5 @@ def decrypt_file(infile: str, outfile: str, key: bytes):
         f.write(plaintext)
 
 if __name__ == '__main__':
-    key = b'12345678'
+    key = bytes([0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x3f])
     decrypt_file('file_encrypted.txt', 'file_decrypted.txt', key)

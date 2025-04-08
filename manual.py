@@ -139,7 +139,7 @@ def generate_keys(key: bytes) -> List[int]:
         subkeys.append(Ki)
     with open("keys.txt", "w") as file:
         for idx, subkey in enumerate(subkeys):
-            file.write(f"Subkey {idx+1}: {subkey:0128b}\n")
+            file.write(f"Subkey {idx+1}:\t{subkey:056b}\n")
     return subkeys
 
 def s_box_substitution(x: int) -> int:
